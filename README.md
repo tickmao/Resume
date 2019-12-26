@@ -2,7 +2,7 @@
 供个人使用的一个简单的个人简介页面，可用于制作个人简历单页面。
 
 # 预览地址：
-https://www.tickmao.com/resume
+https://www.tickmao.com/Resume
 
 # 演示图
 ![ressume](https://ae01.alicdn.com/kf/H6be6930f177546ed829554bde82f6fb0K.png)
