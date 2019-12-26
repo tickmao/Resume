@@ -1,0 +1,325 @@
+/* ----
+
+# Tickmao Style 1.0
+# By: Tickmao
+# Last Update: 2019.12.26
+
+本代码为Tickmao原创，并遵守 MIT 开源协议。欢迎访问我的博客：https://www.tickmao.com/
+
+---- */
+
+@charset "UTF-8";
+
+/* 0 - 全局 */
+
+a {
+    color: #7c66f5;
+}
+
+.wrap {
+    max-width: 1200px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+/* 1 - 页眉  */
+
+/* - 侧边栏 */
+.sidebar {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    color: rgb(58, 58, 58);
+    width: 50px;
+    position: fixed;
+    overflow: hidden;
+    overflow-y: auto;
+    background: #fff;
+    box-shadow: 2px 0 10px rgba(149, 97, 233, 0.3);
+    z-index: 999;
+}
+
+/* -- 头像 */
+.sidebar .avatar {
+    width: 36px;
+    height: 36px;
+    margin: 2em auto;
+    background: #fff;
+    border-radius: 100%;
+    border: #fff 5px solid;
+    transition: transform 0.5s;
+}
+
+.sidebar .avatar:hover {
+    transform: rotate(1turn);
+}
+
+.sidebar .avatar img {
+    border-radius: 100%;
+}
+
+/* -- 侧边栏导航 */
+.sidebar .nav {
+    margin: 0;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+
+.sidebar .nav a {
+    color: rgb(109, 109, 109);
+    padding: 1em;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    transition: background .3s, box-shadow .3s;
+}
+
+/* .sidebar .nav a:hover{
+    background: #7c66f5;
+} */
+
+main {
+    margin-left: 50px;
+}
+
+@media screen and (max-width: 900px) {
+    .sidebar {
+        width: inherit;
+        position: relative;
+    }
+
+    .sidebar .nav {
+        background: #fff;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .sidebar .nav a:hover {
+        background: none;
+        box-shadow: 0 -3px 0 #7c66f5 inset;
+    }
+
+    main {
+        margin-left: 0;
+    }
+}
+
+@media print {
+    .sidebar {
+        display: none;
+    }
+
+    main {
+        margin-left: 0;
+    }
+}
+
+
+/* 2 - 正文 */
+main section {
+    padding: 5em 0;
+    position: relative;
+}
+
+@media screen and (max-width: 900px) {
+    main section {
+        padding: 3em 0;
+    }
+}
+
+#info {
+    background: url(../img/bg-1.png) fixed;
+}
+
+#info .motto {
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+}
+
+#skills {
+    background: #7c66f5;
+}
+
+#works {
+    background: url(../img/bg-2.jpg) fixed;
+}
+
+#contact {
+    background: url(../img/bg-3.png) fixed;
+}
+
+.title {
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.title:before {
+    /* float: left; */
+    /* margin-right: .5em; */
+    font-family: "FontAwesome";
+}
+
+.nav i {
+    color: #dddddd;
+}
+
+.sidebar .nav i:hover {
+    color: #7c66f5;
+}
+
+#info .row .avatar {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#info .row .avatar img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: #fff 5px solid;
+    transition: transform 0.5s;
+    margin-bottom: 20px;
+}
+
+/* - 技能 */
+#skills .title {
+    color: #fff;
+}
+
+.skills-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 100%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.skills-icon:hover i {
+    transform: rotate(1turn);
+}
+
+.skills-icon i {
+    font-size: 50px;
+    line-height: 100px;
+    transition: transform 0.5s;
+}
+
+.skills-title {
+    margin-top: 1.5em;
+    text-align: center;
+    color: #fff;
+}
+
+/* #skills .fa-html5 {
+    color: #E44D26;
+}
+
+#skills .fa-css3 {
+    color: #42A5F5;
+}
+
+#skills .fa-js {
+    color: #FFCA28;
+} */
+
+
+/* - 作品 */
+.works-item img {
+    box-shadow: 0px 2px 5px rgb(214, 202, 255);
+    transition: transform 0.3s;
+}
+
+.works-item img:hover {
+    transform: scale(1.05, 1.05);
+    box-shadow: 0px 2px 10px rgb(214, 202, 255);
+}
+
+.works-item p {
+    padding: 1em 0;
+    text-align: center;
+}
+
+/* - 经历 */
+.timeline {
+    list-style: none;
+    margin-left: 1em;
+    padding-left: 1.5em;
+    border-left: 1px #7c66f5 dashed;
+}
+
+.timeline li {
+    line-height: 1.5em;
+    position: relative;
+    margin-bottom: 1.5em;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.timeline li:hover:before {
+    transform: scale(1.2, 1.2);
+}
+
+.timeline li:before {
+    content: "";
+    top: 0.22em;
+    left: -1.9em;
+    width: 1em;
+    height: 1em;
+    display: block;
+    position: absolute;
+    background: #7c66f5;
+    border-radius: 100%;
+    transition: transform .3s;
+}
+
+/* - 联系我 */
+
+.icon {
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: -0.4em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.content>a:hover {
+    transform: scale(1.05, 1.05);
+    box-shadow: 0px 2px 10px rgb(214, 202, 255);
+}
+
+.content {
+    text-align: center;
+}
+
+.content>a {
+    background-color: #fff;
+    box-shadow: 0px 2px 8px rgb(214, 202, 255);
+    display: inline-block;
+    width: 40px;
+    line-height: 28px;
+    padding: 5px 0px;
+    border-radius: 50%;
+    margin: 16px 8px;
+}
+
+/* 3 - 页尾
+-------------------------------- */
+
+footer {
+    padding: 1em 0;
+    font-size: 14px;
+    text-align: center;
+    background: #ffffff;
+}
+
+footer a {
+    color: inherit;
+}
